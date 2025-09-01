@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="por.css">
+</head>
+<!-- Back to Top Button -->
+<button onclick="scrollToTop()" id="backToTopBtn" class="btn btn-dark">
+  ↑
+</button>
+<script>
+  // down> show -->
+  window.onscroll = function() {
+    const btn = document.getElementById("backToTopBtn");
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+
+  // up
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+
+<body>
+  <!-- Back to Top Button -->
+  <button onclick="scrollToTop()" id="backToTopBtn" class="btn btn-primary">
+    <i class="fas fa-arrow-up"></i>
+    </button>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarScroll">
+
+      <!-- link -->
+      <ul class="navbar-nav me-auto my-4 my-lg-0 navbar-nav-scroll">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Technical_Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+      </ul>
+
+      <!-- social media-->
+      <a class="navbar-brand" href="#">Follow Me</a>
+      <ul class="navbar-nav d-flex flex-row gap-3">
+        <li class="nav-item">
+          <a class="nav-link social-icon" href="https://www.facebook.com/share/19q8dHgbyK/" target="_blank" data-bs-toggle="tooltip" title="Facebook">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link social-icon" href="https://wa.me/201016140481" target="_blank" data-bs-toggle="tooltip" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link social-icon" href="https://github.com/MohamedBendari" target="_blank" data-bs-toggle="tooltip" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link social-icon" href="https://www.linkedin.com/in/mohamed-bendary-6778922ba" target="_blank" data-bs-toggle="tooltip" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Dark Mode -->
+      <button id="darkModeToggle" class="btn btn-outline-dark ms-3">🌙 Dark Mode</button>
+    </div>
+  </div>
+</nav>
+
+  <!-- Hero Section -->
+  <header id="home" class="vh-50 d-flex align-items-center text-center text-white hero">
+    <div class="container">
+      <h1 data-aos="fade-down">Hello 👋 I’m <span class="text-warning">Mohamed Bendary</span></h1>
+      <h2 class="mt-3" id="typing" data-aos="fade-up"></h2>
+      <a href="#projects" class="btn btn-warning mt-4 px-4">View My Work</a>
+    </div>
+  </header>
+
+ <!-- About Section -->
+<section id="about" class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Carousel -->
+      <div class="col-md-6">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" style="max-width: 22rem;">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assent/WhatsApp Image 2025-08-25 at 16.07.21_b3e426f2.jpg" class="d-block w-100" alt="Profile1">
+            </div>
+            <div class="carousel-item">
+              <img src="assent/WhatsApp Image 2025-08-25 at 16.07.21_b3e426f2.jpg" class="d-block w-100" alt="Profile2">
+            </div>
+            <div class="carousel-item">
+              <img src="assent/WhatsApp Image 2025-08-25 at 16.07.24_5ee308af.jpg" class="d-block w-100" alt="Profile3">
+            </div>
+            <div class="carousel-item">
+              <img src="assent/WhatsApp Image 2025-08-25 at 16.08.50_bd81d8d4.jpg" class="d-block w-100" alt="Profile4">
+            </div>
+            <div class="carousel-item">
+              <img src="assent/WhatsApp Image 2025-08-26 at 00.02.28_1b3e8f6c.jpg" class="d-block w-100" alt="Profile4">
+            </div>
+          </div>
+          
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- About Me (نبذة) -->
+      <div class="col-md-6" data-aos="fade-left">
+        <h3>About Me</h3>
+        <p>
+          I am a passionate Web Developer with strong attention to detail, experienced in building professional websites that combine modern, interactive front-end interfaces with secure and reliable back-end systems.
+        </p>
+        <p>
+          📌 I have hands-on experience with various programming languages, working in the field of Internet of Things (IoT) to create smart systems, as well as designing and managing databases for high performance. In addition, I specialize in Flutter mobile app development, delivering complete solutions across web and mobile platforms.
+        </p>
+        <p>
+          🚀 My goal is to transform ideas into practical and innovative digital solutions that meet users’ needs and provide seamless experiences.
+        </p>
+        <p class="text-muted">My Goal: Creating innovative and user-friendly solutions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Technical Skills -->
+<section id="skills" class="py-5 bg-white">
+  <div class="container">
+    <div class="row justify-content-center mb-4" data-reveal>
+      <div class="col-lg-10 text-center">
+        <h2 class="display-6 fw-bold mb-3 text-white">Technical Skills</h2>
+        <div class="underline-animate mb-2"></div>
+      </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" data-reveal>
+
+      
+      <!-- Programming Languages -->
+<div class="col">
+  <div class="card card-body bg-dark border-secondary-subtle rounded-4 shadow-sm h-100">
+    <div class="d-flex align-items-center gap-2 mb-2">
+      <i class="fas fa-code text-info"></i>
+      <h5 class="mb-0 text-white">Programming Languages</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item bg-transparent text-secondary"><i class="fab fa-python me-2 text-info"></i>Python</li>
+      <li class="list-group-item bg-transparent text-secondary"><i class="fab fa-java me-2 text-danger"></i>Java</li>
+      <li class="list-group-item bg-transparent text-secondary"><i class="fas fa-code me-2 text-primary"></i>C++</li>
+      <li class="list-group-item bg-transparent text-secondary"><i class="fas fa-code me-2 text-success"></i>C#</li>
+      <li class="list-group-item bg-transparent text-secondary"><i class="fas fa-microchip me-2 text-warning"></i>Assembly</li>
+      <li class="list-group-item bg-transparent text-secondary"><i class="fas fa-mobile-alt me-2 text-pink"></i>Dart</li>
+      <li class="list-group-item bg-transparent text-secondary"><i class="fab fa-php me-2 text-primary"></i>PHP</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Frontend -->
+<div class="col">
+  <div class="card card-body bg-dark border-secondary-subtle rounded-4 shadow-sm h-100">
+    <div class="d-flex align-items-center gap-2 mb-2">
+      <i class="fab fa-html5 text-danger"></i>
+      <h5 class="mb-0 text-white">Frontend</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item bg-transparent text-secondary"><i class="fab fa-html5 me-2 text-danger"></i>HTML</li>
+      <li class="list-group-item bg-transparent text-secondary"><i class="fab fa-css3-alt me-2 text-primary"></i>CSS</li>
+      <li class="list-group-item bg-transparent text-secondary"><i class="fab fa-bootstrap text-primary"></i>Bootstrap</li>
+      <li class="list-group-item bg-transparent text-secondary"><i class="fab fa-js-square me-2 text-warning"></i>JavaScript</li>
+       <li class="list-group-item bg-transparent text-secondary"><i class="fab fa-react me-2 text-info"></i>React</li>
+        <li class="list-group-item bg-transparent text-secondary"><i class="fab fa-angular text-danger"></i>Angular</li>
+         
+    </ul>
+  </div>
+</div>
+
+<!-- Backend (Frameworks & Tools) -->
+<div class="col">
+  <div class="card card-body bg-dark border-secondary-subtle rounded-4 shadow-sm h-100">
+    <div class="d-flex align-items-center gap-2 mb-2">
+      <i class="fas fa-server text-secondary"></i>
+      <h5 class="mb-0 text-white">Backend (Frameworks & Tools)</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item bg-transparent text-secondary"><i class="fab fa-node-js me-2 text-success"></i>Node.js (Express.js)</li>
+      <li class="list-group-item bg-transparent text-secondary"><i class="fab fa-python me-2 text-info"></i>Django</li>
+      <li class="list-group-item bg-transparent text-secondary"><i class="fab fa-laravel me-2 text-danger"></i>Laravel</li>
+      <li class="list-group-item bg-transparent text-secondary"><i class="fas fa-leaf me-2 text-success"></i>Spring Boot</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Databases -->
+<div class="col">
+  <div class="card card-body bg-dark border-secondary-subtle rounded-4 shadow-sm h-100">
+    <div class="d-flex align-items-center gap-2 mb-2">
+      <i class="fas fa-database text-warning"></i>
+      <h5 class="mb-0 text-white">Databases</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item bg-transparent text-secondary"><i class="fas fa-database me-2 text-warning"></i>SQL</li>
+      <li class="list-group-item bg-transparent text-secondary"><i class="fas fa-database me-2 text-primary"></i>PostgreSQL</li>
+      <li class="list-group-item bg-transparent text-secondary"><i class="fas fa-project-diagram me-2 text-info"></i>Database Design</li>
+    </ul>
+  </div>
+</div>
+
+
+      <!-- Office -->
+      <div class="col">
+  <div class="card card-body bg-dark border-secondary-subtle rounded-4 shadow-sm h-100">
+    <div class="d-flex align-items-center gap-2 mb-2">
+      <i class="fas fa-file-word text-primary"></i>
+      <h5 class="mb-0 text-white">Office</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item bg-transparent text-secondary">
+        <i class="fas fa-file-word text-primary me-2"></i> MS Word
+      </li>
+      <li class="list-group-item bg-transparent text-secondary">
+        <i class="fas fa-file-excel text-success me-2"></i> Excel
+      </li>
+      <li class="list-group-item bg-transparent text-secondary">
+        <i class="fas fa-file-powerpoint text-danger me-2"></i> PowerPoint
+      </li>
+      <li class="list-group-item bg-transparent text-secondary">
+        <i class="fas fa-database text-warning me-2"></i> Access
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+    
+      <!-- IoT -->
+<div class="col">
+  <div class="card card-body bg-dark border-secondary-subtle rounded-4 shadow-sm h-100">
+    <div class="d-flex align-items-center gap-2 mb-2">
+      <i class="fas fa-microchip text-success"></i>
+      <h5 class="mb-0 text-white">IoT</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item bg-transparent text-secondary">
+        <i class="fas fa-microchip me-2"></i> Arduino
+      </li>
+      <li class="list-group-item bg-transparent text-secondary">
+        <i class="fas fa-cogs me-2"></i> Sensors & Actuators
+      </li>
+      <li class="list-group-item bg-transparent text-secondary">
+        <i class="fas fa-microchip me-2"></i> Embedded Systems
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- Other Skills -->
+<div class="col">
+  <div class="card card-body bg-dark border-secondary-subtle rounded-4 shadow-sm h-100">
+    <div class="d-flex align-items-center gap-2 mb-2">
+      <i class="fas fa-lightbulb text-warning"></i>
+      <h5 class="mb-0 text-white">Other Skills</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item bg-transparent text-secondary">
+        <i class="fas fa-project-diagram me-2"></i> Agile
+      </li>
+      <li class="list-group-item bg-transparent text-secondary">
+        <i class="fas fa-users me-2"></i> Scrum
+      </li>
+      <li class="list-group-item bg-transparent text-secondary">
+        <i class="fas fa-tachometer-alt me-2"></i> Performance
+      </li>
+    </ul>
+  </div>
+</div>
+
+</section>
+
+<section class="py-5">
+  <div class="container">
+    
+    <div class="row justify-content-center mb-4" data-reveal>
+      <div class="col-12 text-center">
+        <h2 class="fw-bold text-dark bg-light d-inline-block px-3 py-2 rounded-3">
+  Certifications & Courses
+</h2>
+
+        <p class="text-secondary">A collection of my professional certifications and completed training programs</p>
+      </div>
+    </div>
+
+    <!-- courses-->
+    <div class="row g-4" data-reveal>
+
+      <!-- Front End -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card card-body bg-dark border-secondary-subtle rounded-4 shadow-sm h-100 skill-card">
+          <h6 class="text-white mb-3">
+            <i class="bi bi-patch-check text-danger me-2"></i>Front End Development – ITI
+          </h6>
+          <ul class="mb-0 small text-secondary ps-3">
+            <li>Web design, HTML, CSS, JavaScript , Bootstrap, View,React</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Back End -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card card-body bg-dark border-secondary-subtle rounded-4 shadow-sm h-100 skill-card">
+          <h6 class="text-white mb-3">
+            <i class="bi bi-patch-check text-danger me-2"></i>Back End Development – ITI
+          </h6>
+          <ul class="mb-0 small text-secondary ps-3">
+            <li>Server-side programming & database integration,Django</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Python -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card card-body bg-dark border-secondary-subtle rounded-4 shadow-sm h-100 skill-card">
+          <h6 class="text-white mb-3">
+            <i class="bi bi-patch-check text-danger me-2"></i>Python Programming – Samsung Innovation
+          </h6>
+          <ul class="mb-0 small text-secondary ps-3">
+            <li>Programming fundamentals, OOP, scripting</li>
+          </ul>
+        </div>
+      </div>
+
+
+       <!-- Freelance -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card card-body bg-dark border-secondary-subtle rounded-4 shadow-sm h-100 skill-card">
+          <h6 class="text-white mb-3">
+            <i class="bi bi-patch-check text-danger me-2"></i>Freelance Training – itida+gigs
+          </h6>
+          <ul class="mb-0 small text-secondary ps-3">
+            <li>Freelancing platforms & project management basics</li>
+          </ul>
+        </div>
+      </div>
+
+      
+
+      <!-- Soft Skills & ICDL -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card card-body bg-dark border-secondary-subtle rounded-4 shadow-sm h-100 skill-card">
+          <h6 class="text-white mb-3">
+            <i class="bi bi-patch-check text-danger me-2"></i>Soft Skills & ICDL – Unix Academy
+          </h6>
+          <ul class="mb-0 small text-secondary ps-3">
+            <li>Communication, teamwork & leadership</li>
+        <li>Time management & problem-solving</li>
+        <li>ICDL: Word, Excel, PowerPoint, Access</li>
+        <li>Computer essentials & IT security basics</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Cyber Security -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card card-body bg-dark border-secondary-subtle rounded-4 shadow-sm h-100 skill-card">
+          <h6 class="text-white mb-3">
+            <i class="bi bi-patch-check text-danger me-2"></i>Cyber Security – Microsoft Sprint
+          </h6>
+          <ul class="mb-0 small text-secondary ps-3">
+            <li>Cyber Security fundamentals (CIA triad)</li>
+        <li>Threats & Attacks: Phishing, Malware, Ransomware</li>
+        <li>Network Security: Firewalls, VPNs, IDS/IPS</li>
+        <li>Microsoft Security tools & cloud protection</li>
+          </ul>
+        </div>
+      </div>
+
+       <!-- IoT -->
+      <div class="col-12 col-md-3 col-lg-4">
+        <div class="card card-body bg-dark border-secondary-subtle rounded-4 shadow-sm h-100 skill-card">
+          <img src="assent/WhatsApp Image 2025-08-28 at 09.12.55_574c00f4.jpg" class="card-img-top" alt="AI Certificate">
+          <h6 class="text-white mb-3">
+            <i class="bi bi-patch-check text-danger me-2"></i>IoT Training – ITI
+          </h6>
+          <ul class="mb-0 small text-secondary ps-3">
+            <li>IOT Value chain, IOT Application Development using Master of Things IoT, Device Handes</li>
+          </ul>
+        </div>
+      </div>
+     
+      <!-- CCNA1 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card card-body bg-dark border-secondary-subtle rounded-4 shadow-sm h-100 skill-card">
+          <img src="assent/WhatsApp Image 2025-08-28 at 09.12.59_162ee7cb.jpg" class="card-img-top" alt="AI Certificate">
+          <h6 class="text-white mb-3">
+            <i class="bi bi-patch-check text-danger me-2"></i>CCNA 1 – WE Telecom
+          </h6>
+          <ul class="mb-0 small text-secondary ps-3">
+             <li>Networking fundamentals & OSI model</li>
+              <li>IP addressing & subnetting</li>
+              <li>Switching basics & VLANs</li>
+              <li>Introduction to Routing (static & dynamic)</li>
+               <li>Hands-on practice with Cisco Packet Tracer</li>  
+          </ul>
+        </div>
+      </div>
+
+      <!-- AI Training -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card card-body bg-dark border-secondary-subtle rounded-4 shadow-sm h-100 skill-card">
+          <img src="assent/WhatsApp Image 2025-08-28 at 09.12.58_3412e9e4.jpg" class="card-img-top" alt="AI Certificate">
+          <h6 class="text-white mb-3">
+            <i class="bi bi-patch-check text-danger me-2"></i>AI Training – Creative Menoufia
+          </h6>
+          <ul class="mb-0 small text-secondary ps-3">
+            <li>Artificial Intelligence & machine learning basics</li>
+            <li>Introduction to Artificial Intelligence concepts</li>
+        <li>Machine Learning fundamentals (Supervised & Unsupervised)</li>
+        <li>Deep Learning basics – Neural Networks</li>
+        <li>Python libraries for AI: NumPy, Pandas, TensorFlow</li>
+        <li>Practical AI projects & case studies</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- Project  -->
+<section id="projects" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">My Projects</h2>
+
+    
+    <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="js-tab" data-bs-toggle="tab" data-bs-target="#js" type="button" role="tab">FrontEnd</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="iot-tab" data-bs-toggle="tab" data-bs-target="#iot" type="button" role="tab">IoT</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="web-tab" data-bs-toggle="tab" data-bs-target="#web" type="button" role="tab">BackEnd</button>
+      </li>
+    </ul>
+
+    
+    <div class="tab-content mt-4" id="myTabContent">
+
+      <!--  frontEnd Projects -->
+      <div class="tab-pane fade show active" id="js" role="tabpanel">
+        <div class="row">
+
+           <!-- Mo. Bendary Shop -->
+          <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100" style="width: 16rem;">
+              <img src="assent/Screenshot 2025-09-01 012805.png" class="card-img-top" alt="Project 1">
+              <div class="card-body">
+                <h5 class="card-title">  Mo.Bendary Shop</h5>
+                <p class="card-text">FA simple Vue.js online shop project with products listing, search, and cart functionality</p>
+                <a href="https://github.com/MohamedBendari/Mo.Bendary-Shop" class="btn btn-primary">GitHub</a>
+                <a href="https://mo-bendary-shop.vercel.app/" class="btn btn-success" target="_blank">Live Demo</a>
+                <a href="https://www.linkedin.com/posts/mohamed-bendary-6778922ba_vuejs-frontend-webdevelopment-activity-7368245565127667712-ODOf?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEypKjsBxWmCOzPW0Rpt39Z5tBmkxo09lMA" class="btn btn-dark">linkedin</a>
+              </div>
+            </div>
+          </div>
+          
+            <!-- Vue 3 + Vite -->
+          <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100" style="width: 16rem;">
+              <img src="assent/WhatsApp Image 2025-08-31 at 11.39.15_9d1efb53.jpg" class="card-img-top" alt="Project 2">
+              <div class="card-body">
+                <h5 class="card-title">Vue 3 + Vite</h5>
+                <p class="card-text"> modern e-commerce demo app using Vue.js 3 and Bootstrap 5.
+ The app simulates an online shop with a clean design and smooth user experience.
+</p>
+                <a href="https://github.com/MohamedBendari/vue-shop" class="btn btn-primary">GitHub</a>
+                <a href="https://vue-shop-fawn.vercel.app/" class="btn btn-success" target="_blank">Live Demo</a>
+                <a href="https://www.linkedin.com/posts/mohamed-bendary-6778922ba_new-project-launch-vue-shop-pro-activity-7367839950714667008-s1zE?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEypKjsBxWmCOzPW0Rpt39Z5tBmkxo09lMA" class="btn btn-dark">linkedin</a>
+
+              </div>
+            </div>
+          </div>
+          <!--  Vue Shop Pro — Advanced E-commerce Template -->
+          <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100" style="width: 16rem;">
+              <img src="assent/WhatsApp Image 2025-08-30 at 16.56.29_3c631dd5.jpg" class="card-img-top" alt="Project 2">
+              <div class="card-body">
+                <h5 class="card-title"> Vue Shop Pro — Advanced E-commerce Template</h5>
+                <p class="card-text">About
+Vue Shop Pro is a modern E-commerce template built with Vue.js, HTML5, and CSS3. It provides a responsive and clean UI for displaying products with multiple images, descriptions, and prices</p>
+                <a href="https://github.com/MohamedBendari/Vue-Shop-Pro-Advanced-E-commerce-Template" class="btn btn-primary">GitHub</a>
+                <a href="https://vue-shop-pro-advanced-e-commerce-te.vercel.app/" class="btn btn-success" target="_blank">Live Demo</a>
+                <a href="https://www.linkedin.com/posts/mohamed-bendary-6778922ba_vuejs-webdevelopment-frontend-activity-7367556845353197568-3XAd?utm_source=social_share_send&utm
+                _medium=member_desktop_web&rcm=ACoAAEypKjsBxWmCOzPW0Rpt39Z5tBmkxo09lMA" class="btn btn-dark">linkedin</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Catch The Ball Game -->
+          <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100" style="width: 16rem;">
+              <img src="assent/WhatsApp Image 2025-08-16 at 01.59.25_064f13c3.jpg" class="card-img-top" alt="Project 4">
+              <div class="card-body">
+                <h5 class="card-title">Catch The Ball Game</h5>
+                <p class="card-text">A simple browser-based game built with HTML, CSS, and JavaScript.</p>
+                <a href="https://github.com/MohamedBendari/catch-the-ball-game" class="btn btn-primary">GitHub</a>
+                <a href="https://catch-the-ball-game-ten.vercel.app/" class="btn btn-success" target="_blank">Live Demo</a>
+                <a href="https://www.linkedin.com/posts/mohamed-bendary-6778922ba_just-built-a-fun-mini-game-catch-the-ball-activity-7362257681576796161-VRjz?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEypKjsBxWmCOzPW0Rpt39Z5tBmkxo09lMA" class="btn btn-dark">linkedin</a>
+              </div>
+            </div>
+          </div>
+
+
+           <!-- Calculator Web App -->
+          <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100" style="width: 16rem;">
+              <img src="assent/WhatsApp Image 2025-08-11 at 00.32.25_8d475079.jpg" class="card-img-top" alt="Project 8">
+              <div class="card-body">
+                <h5 class="card-title">Calculator Web App</h5>
+                <p class="card-text">Interactive and responsive calculator using HTML, CSS, and JavaScript.</p>
+                <a href="https://github.com/MohamedBendari/Calculator-Web-App/tree/main" class="btn btn-primary" target="_blank">GitHub</a>
+                <a href="https://calculator-web-app-dusky.vercel.app/" class="btn btn-success" target="_blank">Live Demo</a>
+                <a href="https://www.linkedin.com/posts/mohamed-bendary-6778922ba_developed-an-interactive-and-responsive-calculator-activity-7360426395526647808-t9Kb?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEypKjsBxWmCOzPW0Rpt39Z5tBmkxo09lMA" class="btn btn-dark">linkedin</a>
+                
+              </div>
+            </div>
+          </div>
+
+          <!-- ES6 JavaScript Features Demo -->
+          <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100" style="width: 16rem;">
+              <img src="assent/WhatsApp Image 2025-08-18 at 22.35.46_155593fb.jpg" class="card-img-top" alt="Project 2">
+              <div class="card-body">
+                <h5 class="card-title">ES6 JavaScript Features Demo</h5>
+                <p class="card-text">
+I’ve built a small project that demonstrates asynchronous programming in JavaScript using Promises, async/await, and the Fetch AP</p>
+                <a href="https://github.com/MohamedBendari/ES6-JavaScript-Features-Demo" class="btn btn-primary">GitHub</a>
+                <a href="https://www.linkedin.com/posts/mohamed-bendary-6778922ba_new-project-completed-js-promises-fetch-activity-7363293939509993472-VRP6?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEypKjsBxWmCOzPW0Rpt39Z5tBmkxo09lMA" class="btn btn-dark">linkedin</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modern Todo App -->
+          <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100" style="width: 16rem;">
+              <img src="assent/WhatsApp Image 2025-08-21 at 18.58.02_8ef01df6.jpg" class="card-img-top" alt="Project 3">
+              <div class="card-body">
+                <h5 class="card-title">Modern Todo App</h5>
+                <p class="card-text">A modern and interactive Todo App built with HTML, CSS, and JavaScript...</p>
+                <a href="https://github.com/MohamedBendari/modern-todo-app" class="btn btn-primary">GitHub</a>
+                <a href="https://www.linkedin.com/posts/mohamed-bendary-6778922ba_webdevelopment-javascript-frontend-activity-7364330469414322176-ne0a?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEypKjsBxWmCOzPW0Rpt39Z5tBmkxo09lMA" class="btn btn-dark">linkedin</a>
+              </div>
+            </div>
+          </div>
+            
+
+           <!-- DummyJSON Products Fetch -->
+          <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100" style="width: 16rem;">
+              <img src="assent/WhatsApp Image 2025-08-15 at 16.40.20_4ef0d34d.jpg" class="card-img-top" alt="Project 1">
+              <div class="card-body">
+                <h5 class="card-title">DummyJSON Products Fetch</h5>
+                <p class="card-text">A simple JavaScript project that fetches and displays product data from the DummyJSON API, showing product titles, prices, and images in a responsive layout</p>
+                <a href="https://github.com/MohamedBendari/dummyjson-products-fetch" class="btn btn-primary">GitHub</a>
+                <a href="https://www.linkedin.com/posts/mohamed-bendary-6778922ba_built-a-simple-javascript-project-that-fetches-activity-7362118789968056321-nyPq?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEypKjsBxWmCOzPW0Rpt39Z5tBmkxo09lMA" class="btn btn-dark">linkedin</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Drum Kit -->
+          <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100" style="width: 16rem;">
+              <img src="assent/WhatsApp Image 2025-08-15 at 11.05.39_9cb6b11a.jpg" class="card-img-top" alt="Project 5">
+              <div class="card-body">
+                <h5 class="card-title">Drum Kit</h5>
+                <p class="card-text">A simple interactive drum kit built with JavaScript, HTML, and CSS.</p>
+                <a href="https://github.com/MohamedBendari/drum-kit" class="btn btn-primary">GitHub</a>
+                <a href="https://www.linkedin.com/posts/mohamed-bendary-6778922ba_built-an-interactive-drum-kit-using-html-activity-7362034529227710464-VkeQ?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEypKjsBxWmCOzPW0Rpt39Z5tBmkxo09lMA" class="btn btn-dark">linkedin</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- JS + CSS Analog Clock -->
+          <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100" style="width: 16rem;">
+              <img src="assent/WhatsApp Image 2025-08-13 at 09.12.38_29600a7b.jpg" class="card-img-top" alt="Project 6">
+              <div class="card-body">
+                <h5 class="card-title">JS + CSS Analog Clock</h5>
+                <p class="card-text">An analog clock built with JavaScript and CSS.</p>
+                <a href="https://github.com/MohamedBendari/js-css-analog-clock_ITI" class="btn btn-primary">GitHub</a>
+                <a href="https://www.linkedin.com/posts/mohamed-bendary-6778922ba_an-analog-clock-built-with-javascript-and-activity-7361294824571817984-eqUL?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEypKjsBxWmCOzPW0Rpt39Z5tBmkxo09lMA" class="btn btn-dark">linkedin</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Array Cardio -->
+          <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100" style="width: 16rem;">
+              <img src="assent/WhatsApp Image 2025-08-13 at 09.11.32_87728fd7.jpg" class="card-img-top" alt="Project 7">
+              <div class="card-body">
+                <h5 class="card-title">Array Cardio</h5>
+                <p class="card-text">Practice project focusing on JS array methods like filter(), map(), sort(), and reduce().</p>
+                <a href="https://github.com/MohamedBendari/array-cardio-day1_ITI" class="btn btn-primary">GitHub</a>
+                <a href="https://www.linkedin.com/posts/mohamed-bendary-6778922ba_a-javascript-practice-project-focusing-on-activity-7361294666140450816-Ffv1?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEypKjsBxWmCOzPW0Rpt39Z5tBmkxo09lMA" class="btn btn-dark">linkedin</a>
+              </div>
+            </div>
+          </div>
+
+          
+
+        </div>
+      </div>
+
+      <!-- IoT Projects -->
+      <div class="tab-pane fade" id="iot" role="tabpanel">
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100" style="width: 16rem;">
+              <video class="card-img-top" controls>
+  <source src="video/WhatsApp Video 2025-08-25 at 16.09.39_466af87f.mp4" type="video/mp4">
+</video>
+
+              <div class="card-body">
+                <h5 class="card-title">Car Football using Arduino</h5>
+                <p class="card-text">Car Football using Arduino – A fun robotics project where Arduino-powered cars controlled via Bluetooth or IR remote play football with a lightweight ball. Involves DC motors, motor driver, and chassis design.</p>
+                <a href="https://github.com/MohamedBendari/car-football-use-Arduino-main" target="_blank" class="btn btn-primary">GitHub</a>
+                <a href="https://www.linkedin.com/posts/mohamed-bendary-6778922ba_car-football-is-a-fun-and-educational-project-activity-7360416335513747456-ir94?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEypKjsBxWmCOzPW0Rpt39Z5tBmkxo09lMA" class="btn btn-dark">linkedin</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Web Projects -->
+      <div class="tab-pane fade" id="web" role="tabpanel">
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100" style="width: 16rem;">
+              <img src="assent/WhatsApp Image 2025-08-23 at 19.11.24_1b097524.jpg" class="card-img-top" alt="Project 9">
+              <div class="card-body">
+                <h5 class="card-title">Django CRM Dashboard</h5>
+                <p class="card-text">A simple CRM system built with Django...</p>
+                <a href="https://github.com/MohamedBendari/Django-CRM-Dashboard" class="btn btn-primary">GitHub</a>
+                <a href="https://mbs822002.pythonanywhere.com" class="btn btn-success" target="_blank">Live Demo</a>
+                <a href="https://www.linkedin.com/posts/mohamed-bendary-6778922ba_i-just-deployed-my-first-django-project-activity-7365101555496194048-foi7?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEypKjsBxWmCOzPW0Rpt39Z5tBmkxo09lMA" class="btn btn-dark">linkedin</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- end tab-content -->
+  </div>
+</section>
+
+
+ 
+<!-- Timeline Section -->
+
+<!-- Timeline Section -->
+<section id="timeline" class="py-5" data-aos="fade-up">
+  <div class="container">
+    <h2 class="text-center mb-5">Education & Experience Timeline</h2>
+    <div class="row g-4">
+      <!-- Item 1 -->
+      <div class="col-md-6">
+        <div class="card shadow-sm h-100 bg-dark-mode-card">
+          <div class="card-body">
+            <h5 class="card-title">Bachelor of Technology – New Cairo Technology College</h5>
+            <p class="text-muted mb-1">2022 – Expected 2026</p>
+            <p class="card-text">Studied Frontend & Backend development, specialized in Embedded Systems & Flutter mobile apps.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Item 2 -->
+      <div class="col-md-6">
+        <div class="card shadow-sm h-100 bg-dark-mode-card">
+          <div class="card-body">
+            <h5 class="card-title">Student Projects – NCT College</h5>
+            <p class="text-muted mb-1">2022 – 2025</p>
+            <p class="card-text">Worked on multiple projects: Smart Garage Parking System, University Website, Hedayati App, Car Reporting System.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Item 3 -->
+      <div class="col-md-6">
+        <div class="card shadow-sm h-100 bg-dark-mode-card">
+          <div class="card-body">
+            <h5 class="card-title">Garage Smart System</h5>
+            <p class="text-muted mb-1">2024</p>
+            <p class="card-text">Developed a smart parking management IoT system.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Item 4 -->
+      <div class="col-md-6">
+        <div class="card shadow-sm h-100 bg-dark-mode-card">
+          <div class="card-body">
+            <h5 class="card-title">Hedayati Mobile App</h5>
+            <p class="text-muted mb-1">2025</p>
+            <p class="card-text">Created a guidance app to assist users with navigation and daily tasks.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Send Message Section -->
+<section id="awards" class="py-5" data-aos="fade-up">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="card shadow-lg rounded-4 border-0 bg-dark-mode-card">
+          <div class="card-body p-4">
+            <h3 class="text-center mb-4">Send Me a Message</h3>
+            <form id="contact-form">
+              <div class="mb-3">
+                <input type="text" class="form-control form-control-lg rounded-3" placeholder="Your Name" id="name" required>
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control form-control-lg rounded-3" placeholder="Your Email" id="email" required>
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control form-control-lg rounded-3" rows="5" placeholder="Your Message" id="message" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary w-100 rounded-3">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="bg-dark text-white pt-4 pb-3 mt-5">
+  <div class="container text-center">
+    <h5 class="fw-bold mb-3">Contact</h5>
+    <div class="d-flex justify-content-center gap-4 fs-4">
+      <a href="tel:+201016140481" class="text-white hover-opacity"><i class="fas fa-phone"></i></a>
+      <a href="mailto:mohamedsharkawy078@gmail.com" class="text-white hover-opacity"><i class="fas fa-envelope"></i></a>
+    </div>
+    <div class="mt-3">
+      <p class="small mb-0">© <span id="year"></span> Mohamed Bendary. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+
+  <script src="por.js"></script>
+  <script src="aos-init.js"></script>
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    AOS.init();
+    const toggleBtn = document.getElementById('modeToggle');
+    toggleBtn.addEventListener('click', ()=>{
+      document.body.classList.toggle('dark-mode');
+      toggleBtn.innerHTML = document.body.classList.contains('dark-mode') ? '<i class="bi bi-sun"></i>' : '<i class="bi bi-moon"></i>';
+    });
+  </script>
+</body>
+</html>

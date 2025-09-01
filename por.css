@@ -1,0 +1,97 @@
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg,#1d2671,#c33764);
+}
+
+/* General */
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+/* Timeline Section Background */
+#timeline {
+  background: linear-gradient(135deg, #f9f9f9, #eaf3ff);
+  position: relative;
+}
+
+/* Awards Section Background */
+#awards {
+  background: linear-gradient(135deg, #fff8f0, #ffeedd);
+  position: relative;
+}
+
+/* Optional subtle pattern (using ::before overlay) */
+#timeline::before, #awards::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url("https://www.transparenttextures.com/patterns/geometry.png");
+  opacity: 0.05;
+  pointer-events: none;
+}
+/* الوضع العادي (Light) */
+body {
+  background-color: #ffffff;
+  color: #212529;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* الوضع الداكن */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode .card {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+body.dark-mode .navbar, 
+body.dark-mode .footer {
+  background-color: #c2bebe !important;
+}
+/* الوضع الداكن */
+body.dark-mode #skills {
+  background-color: #222 !important; /* خلفية غامقة للقسم */
+  color: #f1f1f1; /* النص يبقى فاتح */
+}
+
+body.dark-mode #skills h6 {
+  color: #f1f1f1; /* النصوص تحت الأيقونات */
+}
+
+body.dark-mode #skills i {
+  filter: brightness(1.2); /* يخلي الألوان أفتح شوية */
+}
+/* Dark Mode titles fix */
+body.dark-mode h2 {
+  color: #e91313 !important; /* يخلي العناوين واضحة */
+}
+body.dark-mode p {
+  color: #fcfcfc !important;
+}
+#backToTopBtn {
+    display: none; /* يختفي افتراضيًا */
+    position: fixed; /* ثابت في الشاشة */
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 10px 15px;
+  }
+
+   .social-icon i {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+  .social-icon:hover i {
+    transform: scale(1.4);
+    color: #0d6efd; /* ممكن تغير اللون */
+  }
